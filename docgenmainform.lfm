@@ -1,0 +1,142 @@
+object FrmMain: TFrmMain
+  Left = 375
+  Height = 444
+  Top = 255
+  Width = 666
+  Caption = 'Office document generator'
+  ClientHeight = 444
+  ClientWidth = 666
+  DesignTimePPI = 120
+  SessionProperties = 'DrctryOutput.Directory;EdtKeyword.Text;EdtNewValue.Text;FlNmEdtTemplateFile.FileName;FlNmEdtValueListFile.FileName;EdtKeyword1.Text;EdtNewValue1.Text'
+  LCLVersion = '3.8.0.0'
+  object FlNmEdtTemplateFile: TFileNameEdit
+    Left = 16
+    Height = 28
+    Top = 32
+    Width = 632
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 29
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object LblTemplateFile: TLabel
+    Left = 23
+    Height = 20
+    Top = 9
+    Width = 111
+    Caption = 'Office document'
+    FocusControl = FlNmEdtTemplateFile
+  end
+  object BtnGenerate: TButton
+    Left = 536
+    Height = 31
+    Top = 101
+    Width = 112
+    Caption = 'Generate'
+    TabOrder = 1
+    OnClick = BtnGenerateClick
+  end
+  object EdtKeyword: TLabeledEdit
+    Left = 16
+    Height = 28
+    Top = 104
+    Width = 184
+    EditLabel.Height = 20
+    EditLabel.Width = 184
+    EditLabel.Caption = 'Keyword'
+    TabOrder = 2
+    Text = '{%NAME%}'
+    TextHint = '{%KEYWORD%}'
+  end
+  object EdtNewValue: TLabeledEdit
+    Left = 216
+    Height = 28
+    Top = 104
+    Width = 312
+    EditLabel.Height = 20
+    EditLabel.Width = 312
+    EditLabel.Caption = 'New text'
+    TabOrder = 3
+    TextHint = 'Иванов Петр'
+  end
+  object FlNmEdtValueListFile: TFileNameEdit
+    Left = 16
+    Height = 28
+    Top = 320
+    Width = 512
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 29
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 4
+    TextHint = 'CSV value list file name'
+  end
+  object BtnGenerateList: TButton
+    Left = 536
+    Height = 92
+    Top = 256
+    Width = 112
+    Caption = 'Generate'
+    TabOrder = 5
+    OnClick = BtnGenerateListClick
+  end
+  object DrctryOutput: TDirectoryEdit
+    Left = 16
+    Height = 28
+    Top = 256
+    Width = 513
+    ShowHidden = False
+    ButtonWidth = 29
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 296
+    Width = 154
+    Caption = 'CSV value list file name'
+    FocusControl = FlNmEdtValueListFile
+  end
+  object LblOutputDirectory: TLabel
+    Left = 16
+    Height = 20
+    Top = 232
+    Width = 109
+    Caption = 'Output directory'
+    FocusControl = DrctryOutput
+  end
+  object EdtKeyword1: TLabeledEdit
+    Left = 16
+    Height = 28
+    Top = 160
+    Width = 184
+    EditLabel.Height = 20
+    EditLabel.Width = 184
+    EditLabel.Caption = 'Keyword'
+    TabOrder = 7
+    Text = '{%DATE%}'
+    TextHint = '{%KEYWORD%}'
+  end
+  object EdtNewValue1: TLabeledEdit
+    Left = 216
+    Height = 28
+    Top = 160
+    Width = 312
+    EditLabel.Height = 20
+    EditLabel.Width = 312
+    EditLabel.Caption = 'New text'
+    TabOrder = 8
+    TextHint = '1 апреля 2025'
+  end
+  object PrpStrg: TJSONPropStorage
+    StoredValues = <>
+    Formatted = False
+    Left = 496
+    Top = 320
+  end
+end
